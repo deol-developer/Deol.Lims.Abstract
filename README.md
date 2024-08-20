@@ -1,1 +1,1 @@
-# Git
+# Deol.Lims.Abstract
