@@ -5,6 +5,10 @@
         Task SendResultAsync(string sampleNr, string testCode, string testValue, string equipmentCode, CancellationToken cancellationToken);
         Task SendResultAsync(SampleResult result, string equipmentCode, CancellationToken cancellationToken);
         Task SendResultAsync(IEnumerable<SampleResult> results, string equipmentCode, CancellationToken cancellationToken);
+
+        void SendResult(string sampleNr, string testCode, string testValue, string equipmentCode);
+        void SendResult(SampleResult result, string equipmentCode);
+        void SendResult(IEnumerable<SampleResult> results, string equipmentCode);
     }
 
     public readonly struct TestResult(string code, string value)

@@ -3,8 +3,10 @@
     public interface IOrderSender
     {
         Task SendOrderAsync(SampleOrder order, CancellationToken cancellationToken);
-
         Task SendOrderAsync(IEnumerable<SampleOrder> orders, CancellationToken cancellationToken);
+
+        void SendOrder(SampleOrder order);
+        void SendOrder(IEnumerable<SampleOrder> orders);
     }
 
     public class SampleOrder
